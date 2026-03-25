@@ -1,9 +1,11 @@
 ***
 
 # GSoC 2026 Project Proposal: OpenStreetMap
-## Project Title: PackagePanic
-**Project Description:** High-Performance ALNS Framework for Coupled Pickup-and-Delivery Optimization on OSM Networks
-**Project Topics:** C++ Performance Engineering, Combinatorial Optimization, and Full-Stack Geospatial Visualization
+## Project Title: **PackagePanic**
+
+### **Project Description:** High-Performance ALNS Framework for Coupled Pickup-and-Delivery Optimization on OSM Networks
+
+### **Project Topics:** C++ Performance Engineering, Combinatorial Optimization, and Full-Stack Geospatial Visualization
 
 ---
 
