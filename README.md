@@ -4,7 +4,7 @@
 # GSoC 2026: Project Proposal for OpenStreetMap
 **Project Theme:** High-Performance Logistics & Combinatorial Optimization
 
-## **1. Project Title**
+## **1. Project Title - PackagePanic**
 **Developing a High-Performance ALNS Framework for Coupled Pickup-and-Delivery Optimization on OSM Networks**
 
 ---
@@ -21,16 +21,22 @@ The engine will strictly enforce a multi-dimensional feasibility matrix for ever
 
 * **Coupled Time Windows:** Every request is defined by a discrete interval $[T_{Earliest Pickup}, T_{Latest Delivery}]$. The engine ensures that the pickup occurs before the delivery and that both actions fit within the global vehicle schedule.
 * **Volumetric Load Management:** The system tracks the fluctuating weight of the vehicle at every node. A move is only feasible if: 
-    $$\sum \text{Pickups} - \sum \text{Deliveries} \leq \text{Vehicle Capacity}_{max}$$
+    $$
+    \sum \text{Pickups} - \sum \text{Deliveries} \leq \text{Vehicle Capacity}_{max}
+    $$
 * **Economic Objective Function:** The search focuses on minimizing a total cost function $Z$, defined as:
-    $$Z = \sum (\text{Distance} \times \text{Cost Per Km})$$
+    $$
+    Z = \sum (\text{Distance} \times \text{Cost Per Km})
+    $$
 * **User-Defined Convergence:** The ALNS loop will execute for a duration specified by the user, ensuring the "Global Best" solution is captured within the allocated compute budget.
 
 ---
 
 ## **4. Proposed Innovation: The Complexity Profiler**
 To bridge the gap between academic algorithms and production software, this tool will include an intelligent **Runtime Suggestion Engine**. Upon reading the input data (Nodes, Weights, and Windows), the program will calculate a **Complexity Score ($\sigma$)**:
-$$\sigma = f(N^2, \text{Sparsity}, \text{Window Tightness})$$
+$$
+\sigma = f(N^2, \text{Sparsity}, \text{Window Tightness})
+$$
 Before the optimization begins, the program will output a recommendation (e.g., *"Based on 500 requests and high spatial sparsity, 60 seconds is recommended for 95% convergence"*), allowing the user to make informed decisions on the time-vs-quality trade-off.
 
 ---
