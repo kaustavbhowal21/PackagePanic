@@ -164,3 +164,7 @@ The **Complexity Profiler** (Runtime Suggestion Engine) needs its own validation
 *  **Precedence Verification:** Specific unit tests will verify that for every route, the `Pickup_Index` is always less than the `Delivery_Index` in the execution array.
 
 ---
+
+I am not going to spend the first two weeks of June figuring out how to set up my folders or write a CMake file. I am ready to start building the ALNS engine on Day 1.
+
+---
